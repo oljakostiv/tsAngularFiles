@@ -25,3 +25,4 @@ paramFn(
     ['js', 'ts'],
     [{name: 'nikolai', status: false}, {name: 'taras', status: true}]
 )
+
