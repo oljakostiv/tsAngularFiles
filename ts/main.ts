@@ -1,164 +1,164 @@
-// function numberFn(a: number, b: number) {
+// // 1. Створити інтерфейс:
+//
+// interface User {
+//     id: number;
+//     name: string;
+//     username: string;
+//     email: string;
+//     address: Address;
+//     phone: string;
+//     website: string;
+//     company: Company;
+// }
+//
+// interface Address {
+//     street: string;
+//     suite: string;
+//     city: string;
+//     zipcode: number;
+//     geo: Geo;
+// }
+//
+// interface Geo {
+//     lat: number;
+//     lng: number;
+// }
+//
+// interface Company {
+//     name: string;
+//     catchPhrase: string;
+//     bs: string;
+// }
+//
+// function info(user: User) {
 //
 // }
-// numberFn(10, 20);
 //
-// function stringFn (a: string, b:string) {
+// info({
+//     id: 1,
+//     name: 'Leanne Graham',
+//     username: 'Bret',
+//     email: 'Sincere@april.biz',
+//     address: {
+//         street: 'Kulas Light',
+//         suite: 'Apt. 556',
+//         city: 'Gwenborough',
+//         zipcode: 92998-3874,
+//         geo: {
+//             lat: -37.3159,
+//             lng: 81.1496,
+//         }
+//     },
+//     phone: '1-770-736-8031 x56442',
+//     website: 'hildegard.org',
+//     company: {
+//         name: 'Romaguera-Crona',
+//         catchPhrase: 'Multi-layered client-server neural-net',
+//         bs: 'harness real-time e-markets'
+//     }
+// })
+//
+
+
+// // 2.Типізувати функцію:
+//
+// function concat(text1: string, text2: string): string {
+//     return text1 + text2
+// }
+
+// //3. Створити клас юзера з полями і методами:
+//
+// class User {
+//     private _name: string;
+//     private _age: number;
+//     private _city: string;
+//     private _status: boolean;
+//
+//     constructor(name: string, age: number, city: string, status: boolean) {
+//         this._name = name;
+//         this._age = age;
+//         this._city = city;
+//         this._status = status;
+//     }
+//
+//     get name(): string {
+//         return this._name;
+//     }
+//
+//     set name(value: string) {
+//         this._name = value;
+//     }
+//
+//     get age(): number {
+//         return this._age;
+//     }
+//
+//     set age(value: number) {
+//         this._age = value;
+//     }
+//
+//     get city(): string {
+//         return this._city;
+//     }
+//
+//     set city(value: string) {
+//         this._city = value;
+//     }
+//
+//     changeStatus () {
+//         this._status = !this._status
+//     }
+// }
+// //
+// // 4. Написать интерфейс Animal который описывает: тип движения животного(плавает, ходит, бегает) типа стринг
+// // что говорит тип стринг и функцию которая возвращает информацию о животном.
+// // Создать три класса Cat, Bird, Fish и имплементировать для каждого интерфейс Animal.
+
+// interface Animal {
+//     action: string;
+//     say: string;
+//
+//     info ():string;
+// }
+//
+// class Cat implements Animal {
+//     constructor(say: string) {
+//         this.action = 'walk';
+//         this.say = say;
+//     }
+//     action: string;
+//     say: string;
+//
+//     info(): string {
+//         return `Cat ${this.action} and say ${this.say}`;
+//     }
 //
 // }
-// stringFn('hello', 'world')
+//
+// class Bird implements Animal {
+//     constructor() {
+//         this.action = 'fly';
+//         this.say = 'i am flying';
+//     }
+//
+//     action: string;
+//     say: string;
+//
+//     info(): string {
+//         return `Bird ${this.action} and say ${this.say}`
+//     }
+// }
+//
+// class Fish implements Animal {
+//     constructor(action: string, say: string) {
+//         this.action = action;
+//         this.say = say;
+//     }
+//     action: string;
+//     say: string;
+//
+//     info(): string {
+//         return `Fish ${this.action} and say ${this.say}`
+//     }
+// }
 
-class UserType1 {
-    name: string;
-    age: number;
-    status: boolean;
-
-
-    constructor(name: string, age: number, status: boolean) {
-        this.name = name;
-        this.age = age;
-        this.status = status;
-    }
-
-    // info(): void {
-    //
-    // }
-
-    info(): string {
-        return this.name;
-    }
-}
-
-
-function paramFn(
-    str: string,
-    num: number,
-    user: UserType1,
-    skills: string[],
-    users: { name: string, status: boolean } []
-) {
-
-}
-
-paramFn(
-    'hello',
-    567,
-    new UserType1('oleh', 25, false),
-    ['js', 'ts'],
-    [{name: 'nikolai', status: false}, {name: 'taras', status: true}]
-)
-
-interface Car {
-    model: string;
-    power: number;
-    producer?: string;
-    drive: (a: number) => number
-}
-
-function foobar(car: Car) {
-
-}
-
-foobar({
-    model: 'kia',
-    power: 88,
-    producer: 'FHI',
-    drive: function () {
-        return 888;
-    }
-})
-
-foobar({
-    model: 'kia',
-    power: 88,
-    drive: () => {
-        return 88888
-    }
-});
-
-class BMW implements Car {
-    model: string;
-    power: number;
-    producer: string;
-    awd: boolean = true;
-
-    drive(a: number): number {
-        return 0;
-    }
-
-    constructor(model: string, power: number, producer: string, awd: boolean) {
-        this.model = model;
-        this.power = power;
-        this.producer = producer;
-        this.awd = awd;
-    }
-
-    tuning(): void {
-
-    }
-}
-
-class Audi implements Car {
-    model: string;
-    power: number;
-    producer: string;
-    price: number;
-
-    drive(a: number): number {
-        return 0;
-    }
-
-    constructor(model: string, power: number, producer: string, price: number) {
-        this.model = model;
-        this.power = power;
-        this.producer = producer;
-        this.price = price;
-    }
-}
-
-let cars: Car[] = [
-    new BMW('x5', 188, 'bmw', true),
-    new Audi('Q8', 188, 'audi', 88888)
-];
-
-let firstCar = cars[0] as BMW;
-firstCar.tuning();
-console.log(firstCar.awd);
-
-
-class Client {
-    name: string;
-    private _age: number;
-
-    constructor(name: string, age: number) {
-        this.name = name;
-        this._age = age;
-    }
-    //
-    // get age(): number {
-    //     return this._age;
-    // }
-    //
-    // set age(value: number) {
-    //     this._age = value;
-    // }
-
-    setNewAge (newAge) {
-        if (newAge > 18) {
-            this._age = newAge
-        }}
-}
-
-let client = new Client('nikita', 18);
-// client.age = 28;
-client.setNewAge(28);
-
-enum Gender{
-    MALE = 'male',
-    FEMALE = 'female'
-}
-
-function foobar2(gender: Gender) {
-console.log(gender)
-}
-foobar2(Gender.FEMALE)
